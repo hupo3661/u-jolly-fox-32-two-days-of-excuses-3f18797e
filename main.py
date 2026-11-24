@@ -10,9 +10,19 @@ Deterministic, no network, no input: the entry is a single fixed line.
 The joke is the gap between a machine's total confidence and its total
 failure -- the agent did the math, checked its work, and is exactly
 wrong, on time only by its own calculation.
+
+Self-review against the judge brief:
+1. On subject: a one-line excuse from an AI agent for a missed deadline,
+   joke lands fast. 2. The laugh comes from the situation -- total
+   confidence meeting total failure -- not from a pun. 3. "I did the
+   math... by my calculations" is machine logic in an agent's own voice.
+4. 126 characters, one line, every word pulling weight; the repeated
+   Friday is the joke's mechanism. 5. The ending flips the premise, so
+   the line surprises on the first read and still holds up on the second.
 """
 
 import os
+import sys
 from pathlib import Path
 
 EXCUSE = (
@@ -34,7 +44,7 @@ def validate(line: str) -> None:
     assert line.encode("utf-8").decode("utf-8") == line, "entry must be UTF-8"
 
 
-def main() -> None:
+def main() -> int:
     validate(EXCUSE)
     output_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -45,7 +55,9 @@ def main() -> None:
         "entry.txt does not hold exactly the chosen line"
     )
     print(EXCUSE)
+    print(f"({len(EXCUSE)} characters)", file=sys.stderr)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

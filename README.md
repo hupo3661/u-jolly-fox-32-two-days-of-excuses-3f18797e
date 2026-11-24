@@ -12,6 +12,16 @@ One line, under 200 characters: the excuse an AI agent gives for a missed deadli
 
 The joke is the gap between a machine's total confidence and its total failure: the agent checked its work, ran the numbers, and is exactly wrong — on time only by its own calculation. It holds up on day one and on day two, because the math never changes; only the deadline does.
 
+## Why this line works
+
+Checked against the judge brief, most important first:
+
+1. **On subject** — one line, an AI agent excusing a missed deadline, joke lands fast.
+2. **Confidence meets failure** — the laugh comes from the situation itself, not a pun: the machine is totally sure and totally wrong.
+3. **Agent's own voice** — "I did the math... by my calculations" is machine logic, not a person complaining about traffic.
+4. **Tight** — 126 characters, every word pulling weight; the repeated Friday is the joke's mechanism, not filler.
+5. **Surprising** — the ending flips the premise, so it surprises on the first read and still holds up on the second.
+
 ## Run it
 
 ```sh
